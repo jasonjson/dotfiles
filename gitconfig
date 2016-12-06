@@ -74,3 +74,6 @@
 # Allow local customizations
 [include]
     path = ~/.gitconfig_local
+[user]
+	name = jason
+	email = johnny.lyy@gmail.com
