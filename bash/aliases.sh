@@ -2,7 +2,7 @@
 
 alias lm='ls -lt | more'
 alias ll='ls -al'
-alias ls='ls --color'
+alias ls='ls -G'
 #alias tm='tmux -2'
 alias tm='tmux'
 
@@ -27,7 +27,7 @@ alias cln='rm -rf *.tsk *.o 00* *.linux'
 alias gs='git status'
 alias gp='git push'
 alias gom='git push origin master'
-alias gc='git commit'
+alias gac='git add . && git commit -m '
 alias ga='git add'
 alias gd='git diff'
 alias gb='git branch'
