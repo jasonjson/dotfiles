@@ -68,18 +68,7 @@ nnoremap <Leader>do :windo diffoff<CR>
 nnoremap <Leader>dom :Gdiff origin/master<CR>
 nnoremap <Leader>du :diffupdate<CR>
 nnoremap <Leader>ev :e $MYVIMRC<CR>G$F/
-nnoremap <Leader>ff :FSHere<CR>
-nnoremap <Leader>fh :FSSplitLeft<CR>
-nnoremap <Leader>fj :FSSplitBelow<CR>
-nnoremap <Leader>fk :FSSplitAbove<CR>
-nnoremap <Leader>fl :FSSplitRight<CR>
-nnoremap <Leader>fx :call GTestFixture("")<Left><Left>
-nnoremap <Leader>gg :call Cdroot()<CR>:Grepper<CR>
 nnoremap <Leader>h :set hlsearch! hlsearch?<CR>
-nnoremap <Leader>ia O// Application Includes<ESC>
-nnoremap <Leader>ib O// BDE Includes<ESC>
-nnoremap <Leader>ii O// Application Includes<CR>// BDE Includes<CR>// System Includes<ESC>
-nnoremap <Leader>is O// System Includes<ESC>
 nnoremap <Leader>jc :YcmCompleter GoToDeclaration<CR>
 nnoremap <Leader>jf :YcmCompleter GoToDefinition<CR>
 nnoremap <Leader>ji :YcmCompleter GoToImprecise<CR>
@@ -93,29 +82,4 @@ nnoremap <Leader>ss :call SortSection()<CR>
 nnoremap <Leader>te :tabe %:h<CR>
 nnoremap <Leader>tf :call Cdroot()<CR>:call MkGtest()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
-nnoremap <Leader>vc :w<CR>:call VimuxRunCommand('chmod +x *.hs; ./*.hs < input')<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
-nnoremap <Leader>vl :w<CR>:call VimuxRunCommand('(load "' . bufname("%") . '")')<CR>
-nnoremap <Leader>vr :w<CR>:VimuxRunLastCommand<CR>
-nnoremap <Leader>vt :w<CR>:call VimuxRunCommand("clear; make test -j")<CR>
-nnoremap <Leader>vv :w<CR>:VimuxPromptCommand<CR>
-nnoremap <Leader>vx :VimuxInterruptRunner<CR>
-nnoremap <Leader>w :call StripTabsAndTrailingWhitespaces()<CR>:w<CR>
-
-" Local Leaders
-autocmd FileType haskell nmap <buffer> <Leader>ga :w<CR>:GhcModTypeInsert<CR>
-autocmd FileType haskell nmap <buffer> <Leader>gc :w<CR>:HdevtoolsClear<CR>
-autocmd FileType haskell nmap <buffer> <Leader>gi :w<CR>:GhcModInfoPreview<CR>
-autocmd FileType haskell nmap <buffer> <Leader>gt :w<CR>:HdevtoolsType<CR>
-autocmd FileType haskell nmap <buffer> <Leader>sc :HoogleClose<CR>
-autocmd FileType haskell nmap <buffer> <Leader>sh :Hoogle
-autocmd FileType haskell nmap <buffer> <Leader>si :HoogleInfo<CR>
-
-autocmd FileType haskell nmap <buffer> <Leader>vr :w<CR>:call VimuxRunCommand(":r")<CR>
-autocmd FileType haskell nmap <buffer> <Leader>vt :w<CR>:call VimuxRunCommand("clear; stack test")<CR>
-autocmd FileType haskell nmap <buffer> <F4> :w<CR>:call VimuxRunCommand("clear; stack test")<CR>
-
-" Note - l and q are used for the location list and quickfix toggle by ListToggle
-
-
-nnoremap <C-p>:call Cdroot()<CR>:Denite file_rec<CR>

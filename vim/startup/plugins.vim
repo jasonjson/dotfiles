@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'https://github.com/scrooloose/nerdcommenter'       "auto comment
 Plug 'Shougo/denite.nvim'                                " Helm for Vim
 Plug 'Valloric/ListToggle'                               " Toggling quickfix and location list
 Plug 'bhipple/vimux'                                     " Vim and Tmux Integration
@@ -100,3 +101,4 @@ if g:bbenv != ""
 else
     let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/cpp/.ycm_extra_conf.py'
 endif
+
