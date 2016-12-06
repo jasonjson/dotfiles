@@ -3,48 +3,17 @@
 - link:
     ~/.dotfiles: ''
     ~/.Xdefaults: Xdefaults
-    ~/.clang-format: clang-format
+    ~/.bash: bash/
     ~/.config/nvim/init.vim: vimrc
-    ~/.config/nvim:
-        force: true
-        create: true
-        path: vim
-    ~/.dir_colors: dir_colors
-    ~/.emacs: emacs
-    ~/.ghc/ghci.conf:
-      create: true
-      path: ghc/ghci.conf
     ~/.git_template: git_template/
     ~/.gitconfig: gitconfig
-    ~/.haskeline: haskeline
-    ~/.inputrc: inputrc
-    ~/.ipython/profile_default/ipython_notebook_config.py:
-        create: true
-        force: true
-        path: ipython/ipython_notebook_config.py
-    ~/.ipython/profile_default/startup/00-pyspark-setup.py:
-        create: true
-        force: true
-        path: ipython/startup/00-pyspark-setup.py
-    ~/.irssi: irssi/
-    ~/.nixpkgs: nixpkgs/
-    ~/.quicklisp: quicklisp/
-    ~/.sbclrc: sbclrc
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux/
     ~/.vim:
         force: true
         path: vim
     ~/.vimrc: vimrc
-    ~/.vimrc_minimal: vimrc_minimal
-    ~/.xmobarrc: xmobarrc
-    ~/.xmonad: xmonad/
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
-    ~/.zsh: zsh/
-    ~/.zshenv: zshenv
-    ~/.zshrc: zshrc
-    ~/Gemfile.lock: Gemfile.lock
-    ~/Gemfile: Gemfile
     ~/bin: bin/
 
 - shell:
@@ -53,15 +22,7 @@
     stdin: true
     stdout: true
     stderr: true
-  - command: rm -f vim/spell/extra-words.add.spl && vim +"mkspell vim/spell/extra-words.add" +qall
-    stdin: true
-    stdout: true
-    stderr: true
   - command: scripts/ycm_regular_install.sh &
-    stdin: true
-    stdout: true
-    stderr: true
-  - command: make -C lib/ all
     stdin: true
     stdout: true
     stderr: true
