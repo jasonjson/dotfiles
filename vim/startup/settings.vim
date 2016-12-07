@@ -6,12 +6,6 @@ set nocompatible
 "" ============================================================================
 ""                                  Globals
 "" ============================================================================
-" Determine Environment
-let g:platform = GetPlatform()
-let g:bbenv = GetBBENV()
-
-" To enable the saving and restoring of screen positions.
-let g:screen_size_restore_pos = 1
 
 "" ============================================================================
 ""                            Editing and Moving
@@ -20,16 +14,8 @@ syntax on
 set autoindent
 set cindent
 set backspace=indent,eol,start
-
-" Backup directory for swp files
+colorscheme molokai
 set noswapfile
-set directory=""
-
-" Faster terminal scrolling?  TBD
-"set ttyfast
-
-" runtime path search for Ex
-set ru
 
 " Fixing tabs
 set tabstop=4
@@ -43,21 +29,9 @@ set hidden
 set autowrite
 set autoread
 
-" Configure the :make command
-set makeprg=make
-
-" Set path for file searches
-set path+=/home/bhipple/mbig/**
-
-" Ignore whitespace on diffs
-set diffopt+=iwhite
-
 " Smart case sensitivity
 set ignorecase
 set smartcase
-
-" Fix background color
-set t_ut=
 
 " When multiple completions are possible, show all
 set wildmenu
@@ -71,17 +45,8 @@ set wildignore+=*.o,*.d,00*,nohup.out,tags,.hs-tags,*.hi,*.gcno,*.gcda,*.fasl,*.
 " Number of lines to scroll past when the cursor scrolls off the screen
 set scrolloff=2
 
-" Extend functionality of the % key's matching
-runtime macros/matchit.vim
-
 " Tool to use for Grepper
 set grepprg="git"
-
-" What to use for gq
-set formatprg=par\ -w80
-
-" Additional words for the spell checker
-set spellfile=~/.vim/spell/extra-words.add
 
 "" ============================================================================
 ""                                Appearances
@@ -104,22 +69,3 @@ set hlsearch
 set foldmethod=manual
 set foldnestmax=3
 set foldminlines=10
-
-"" ============================================================================
-""                               Auto Commands
-"" ============================================================================
-" Automatically open the QuickFix Window after a make
-autocmd QuickFixCmdPost *make* cwindow
-
-" Make
-autocmd FileType make setlocal noexpandtab shiftwidth=8
-
-" XML
-autocmd FileType xml setlocal equalprg=xmllint\ --format\ -
-
-" Markdown
-autocmd BufNewFile,BufReadPost *.md set filetype=markdown
-
-" Haskell
-au FileType haskell setlocal tags=.hs-tags
-au BufEnter *.hs compiler ghc

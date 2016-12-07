@@ -1,21 +1,10 @@
 "" ============================================================================
 ""                             All Mode Mappings
 "" ============================================================================
-" Bael log category at the start of function
-map <F6> <ESC>[[oBAEL_LOG_SET_CATEGORY(LOG_CATEGORY);<ESC><C-o>
-
-" Allow saving of files as sudo when I forgot to start vim using sudo.
-cmap w!! w !sudo tee > /dev/null %
 
 "" ============================================================================
 ""                           Insert Mode Mappings
 "" ============================================================================
-" Bael Log Shortcuts
-inoremap <F2> BAEL_LOG_TRACE << 
-inoremap <F3> BAEL_LOG_DEBUG << 
-inoremap <F4> BAEL_LOG_ERROR << 
-inoremap <F5> << BAEL_LOG_END;<ESC>
-
 " Leaving insert mode with jj or jk
 inoremap jj <Esc><Right>
 inoremap jk <Esc><Right>
@@ -34,21 +23,6 @@ nnoremap n :set hlsearch<CR>n
 nnoremap N :set hlsearch<CR>N
 nnoremap / :set hlsearch<CR>/
 nnoremap ? :set hlsearch<CR>?
-
-" Swap to last buffer
-nnoremap <silent> <F8> :b#<CR>
-
-" Compilation and testing with Dispatch
-nnoremap <F2> :call Cdroot()<CR>:Make clean<CR>
-if(g:bbenv == "")
-    nnoremap <F4> :call Cdroot()<CR>:Make all<CR>:Make run<CR>:Copen<CR>/FAILED<CR>
-else
-    nnoremap <F3> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make gtest -j")<CR>
-    nnoremap <F4> :w<CR>:call Cdroot()<CR>:call VimuxRunCommand("clear; make -j")<CR>
-endif
-
-noremap <F5> :cex[]<CR>:cclose<CR>
-
 
 "" ============================================================================
 ""                         Leader Mappings (Sorted)
@@ -83,3 +57,15 @@ nnoremap <Leader>te :tabe %:h<CR>
 nnoremap <Leader>tf :call Cdroot()<CR>:call MkGtest()<CR>
 nnoremap <Leader>tm :Tabmerge right<CR>
 nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
+
+
+map cc <plug>NERDCommenterToggle
+"repalce tabs with white spaces"
+map <F2> :retab <CR> :wq! <CR>
+""Nerdtree open/close"
+nnoremap <F5> :NERDTreeToggle<CR>
+""toggle highlight search"
+nnoremap <F3> :set hlsearch!<CR>
+
+"remove leading white spaces"
+nnoremap ft :left<CR>
