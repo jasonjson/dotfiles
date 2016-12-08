@@ -69,3 +69,18 @@ nnoremap <F3> :set hlsearch!<CR>
 
 "remove leading white spaces"
 nnoremap ft :left<CR>
+
+"The original carat 0 swap, press 0 goes to the first non-white space char,
+""press 0 again goest to the first column
+nnoremap <silent> 0 :call ToggleMovement('^', '0')<CR>
+"How about G and gg
+nnoremap <silent> G :call ToggleMovement('G', 'gg')<CR>
+nnoremap <silent> gg :call ToggleMovement('gg', 'G')<CR>"
+
+nnoremap <C-w> :w<CR>
+inoremap <C-w> <esc>='[:w<cr>]'
+
+nnoremap <leader>em :vsplit ~/.vim/startup/mappings.vim<cr>
+nnoremap <leader>es :vsplit ~/.vim/startup/settings.vim<cr>
+nnoremap <leader>ep :vsplit ~/.vim/startup/plugins.vim<cr>
+nnoremap <leader>sv :source ~/.vimrc<cr>

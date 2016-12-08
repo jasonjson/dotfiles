@@ -1,0 +1,231 @@
+priority -50
+
+extends c
+
+# We want to overwrite everything in parent ft.
+priority -49
+
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+snippet beginend "$1.begin(), $1.end() (beginend)"
+${1:v}${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}begin(), $1${1/^.*?(-)?(>)?$/(?2::(?1:>:.))/}end()
+endsnippet
+
+snippet ma "main function"
+int main(int args, char *argv[])
+{
+    ${0}
+    return EXIT_SUCCESS;
+}
+endsnippet
+
+snippet ns "namespace .. (namespace)"
+namespace${1/.+/ /m}${1:`!p snip.rv = snip.basename or "name"`}
+{
+    ${VISUAL}${0}
+}${1/.+/ \/* /m}$1${1/.+/ *\/ /m}
+endsnippet
+
+
+snippet bns "namespace .. (namespace)"
+namespace BloombergLP {
+namespace trnx {
+
+${0}
+
+
+} /*close package namespace*/
+} /*close enterprise namespace*/
+endsnippet
+
+snippet tp "template <typename ..> (template)"
+template <typename ${1:_InputIter}>
+endsnippet
+
+snippet cla "An entire .h generator" b
+#ifndef INCLUDED_${2:`!p snip.rv = re.sub(r'[^A-Za-z0-9]+','_', snip.basename).upper()`}
+#define INCLUDED_$2
+
+namespace BloombergLP {
+namespace ${3:`!p snip.rv = snip.basename.split("_")[0]`} {
+
+class ${1:`!p 
+if not snip.c:
+	import string
+	name = snip.basename.split("_")[1]
+	snip.rv = name[0].upper() + name[1:]`} {
+public:
+	/*Constructor*/
+    ${1/(\w+).*/$1/} ();
+
+	/*Copy constructor*/
+    ${1/(\w+).*/$1/} (const ${1/(\w+).*/$1/} &that);
+
+	/*Destructor*/
+    ~${1/(\w+).*/$1/} ();
+
+	/*Operator assignment*/
+    ${1/(\w+).*/$1/}& operator= (const ${1/(\w+).*/$1/} &rhs);
+
+private:
+	
+};
+
+/*inline function*/
+
+/*non-member function*/
+
+} /*close package namespace*/
+} /*close enterprise namesapce*/
+
+#endif /*end of include guard: $2*/
+endsnippet
+# vim:ft=snippets:
+
+snippet ni "ifnotincluded" b
+#ifndef INCLUDED_`!p snip.rv = t[1].upper().split(".")[0]`
+#include <${1:SYMBOL}>
+#endif /* ifndef $1 */
+
+endsnippet
+
+snippet cpp "create cpp file" b
+#ifndef INCLUDED_`!p snip.rv = t[2].upper().split(".")[0]`
+#include <${2:`!p snip.rv = snip.basename + ".h"`}>
+#endif /* ifndef $2 */
+
+namespace BloombergLP {
+namespace `!p snip.rv = snip.basename.split("_")[0]` {
+
+${1}
+
+} /*close package namespace*/
+} /*close enterprise namesapce*/
+endsnippet
+
+snippet str "bsl_string" i
+bsl::string
+endsnippet
+
+snippet token "tokenize" b
+#ifndef INCLUDED_BDEUT_STRTOKENREFITER_H
+#include <bdeut_strtokenrefiter.h>
+#endif /* ifndef bdeut_strtokenrefiter.h */
+
+void tokenize(bsl::vector<bsl::string>& tokens,
+              const bsl::string& input,
+			  const char* softDelims,
+              const char* hardDelims)
+{
+    bdeut_StrTokenRefIter tokenIt(input.c_str(), softDelims, hardDelims);
+    for(; tokenIt; ++tokenIt) {
+        tokens.push_back(tokenIt());
+    }
+}
+endsnippet
+
+snippet malog "main function with log"
+#ifndef INCLUDED_BADE_LOG_H
+#include <bael_log.h>
+#endif /* ifndef bade_log.h */
+
+#ifndef INCLUDED_BAEL_LOGGERMANAGER_H
+#include <bael_loggermanager.h>
+#endif /* ifndef bael_loggermanager.h */
+
+#ifndef INCLUDED_BAEL_FILEOBSERVER_H
+#include <bael_fileobserver.h>
+#endif /* ifndef bael_fileobserver.h */
+
+#ifndef INCLUDED_BAEL_LOGGERMANAGERCONFIGURATION_H
+#include <bael_loggermanagerconfiguration.h>
+#endif /* ifndef bael_loggermanagerconfiguration.h */
+
+namespace BloombergLP {
+namespace {
+
+void init_logger(bael_Severity::Level logPublishThreshold,bael_Severity::Level stdoutThreshold);
+
+void init_logger(bael_Severity::Level logPublishThrehold, bael_Severity::Level stoutThrehold) {
+	static bael_LoggerManagerConfiguration configuration;
+
+    configuration.setDefaultThresholdLevelsIfValid(
+        bael_Severity::OFF,  /*level for recording in log-buffer*/
+		logPublishThrehold,  /*level for sending mesg to observer*/
+        bael_Severity::OFF,  /*level for flushing log-buffer*/
+        bael_Severity::OFF); /*level for flushing all log-buffers*/
+
+    static bael_FileObserver fileObserver(stoutThrehold);
+    fileObserver.enableFileLogging("out.log", true);
+    static bael_LoggerManagerScopedGuard guard(&fileObserver, configuration);
+}
+
+} /*close package namespace*/
+} /*close enterprise namesapce*/
+
+int main(int args, char *argv[])
+{
+    using namespace BloombergLP;
+	/*Setup Logging*/
+	init_logger(bael_Severity::DEBUG, bael_Severity::INFO);
+    ${0}
+    return EXIT_SUCCESS;
+}
+endsnippet
+
+snippet logca "log category"
+BAEL_LOG_SET_CATEGORY("BAELLOG");
+endsnippet
+
+snippet loger "error log" b
+BAEL_LOG_ERROR << $0 << BAEL_LOG_END;
+endsnippet
+
+snippet login "info log" b
+BAEL_LOG_INFO << $0 << BAEL_LOG_END;
+endsnippet
+
+snippet trim "trim string" b
+bdeu_String::trim(&${0:Name});
+endsnippet
+
+snippet pr "<< overloading" b
+bsl::ostream& operator<<(bsl::ostream& out, const ${0:class}& data);
+endsnippet
+
+snippet sql "start a sql socket" b
+#ifndef INCLUDED_BAEL_LOG
+#include <bael_log.h>
+#endif /* ifndef bael_log.h */
+
+namespace {
+const char setUtcQuery[] = "SET TIMEZONE UTC";
+}  /*close anonymous namespace*/
+
+namespace BloombergLP {
+namespace trnfrmdb {
+
+Accessor::Error Accessor::getSqlService(a_cdb2::SqlService* sqlService) const
+{
+    BAEL_LOG_SET_CATEGORY("GETSQLSERVICE_LOG");
+    int rc = sqlService->open(d_dbName.c_str());
+    bsl::string errorDescription;
+    if(bsidb2::StatusCode::k_OK != rc) {
+        sqlService->errorStatus(&errorDescription);
+        BAEL_LOG_ERROR << errorDescription << BAEL_LOG_END;
+        return Failure;
+    }
+
+    // Set the time zone to UTC
+    if(bsidb2::StatusCode::k_OK != sqlService->executeStatement(setUtcQuery)) {
+        sqlService->errorStatus(&errorDescription);
+        BAEL_LOG_ERROR << errorDescription << BAEL_LOG_END;
+        return Failure;
+    }
+    return Success;
+}
+
+} /*close package namespace*/
+} /*close enterprise namesapce*/
+endsnippet

@@ -1,27 +1,20 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'tomasr/molokai'
-Plug 'https://github.com/scrooloose/nerdcommenter'       "auto comment
-Plug 'Shougo/denite.nvim'                                " Helm for Vim
+Plug 'scrooloose/nerdcommenter'       "auto comment
 Plug 'Valloric/ListToggle'                               " Toggling quickfix and location list
-Plug 'bhipple/vimux'                                     " Vim and Tmux Integration
 Plug 'bling/vim-airline'                                 " Status line
-Plug 'christoomey/vim-tmux-navigator'                    " Window/Pane switching with Vim and Tmux
-Plug 'godlygeek/tabular'                                 " Align blocks of text
 Plug 'justinmk/vim-syntax-extra'                         " Flex and Bison syntax highlighting
 Plug 'luochen1990/rainbow'                               " Rainbow parenthesis coloring
 Plug 'scrooloose/syntastic'                              " Syntax checking
 Plug 'spf13/vim-autoclose'                               " Matching [({'
-Plug 'tommcdo/vim-exchange'                              " cx operator for exchanging text regions
 Plug 'tpope/vim-commentary'                              " Comment/uncomment operator
 Plug 'tpope/vim-fugitive'                                " Git Wrapper
-Plug 'tpope/vim-repeat'                                  " Dot operator for plugins
 Plug 'tpope/vim-rhubarb'                                 " Vim + Git + Hub
 Plug 'tpope/vim-surround'                                " Surrounding text
-Plug 'tpope/vim-tbone'                                   " vim and tmux mappings
-Plug 'tpope/vim-unimpaired'                              " Pairs of keyboard mappings for common tasks
-Plug 'tpope/vim-vinegar'                                 " netrw improvement
 Plug 'SirVer/ultisnips'               " Text snippets
+Plug 'honza/vim-snippets'
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
 
 call plug#end()
@@ -29,9 +22,12 @@ call plug#end()
 "" ============================================================================
 ""                              Plugin Settings
 "" ============================================================================
-" Grepper
-nmap gs :call Cdroot()<CR><plug>(GrepperOperator)
-xmap gs :call Cdroot()<CR><plug>(GrepperOperator)
+" UltiSnips
+ let g:UltiSnipsExpandTrigger = "<tab>"
+ let g:UltiSnipsJumpForwardTrigger = "<tab>"
+ let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+ let g:snips_author = "Jason Liu"
+ let g:snips_email = "johnny.lyy@gmail.com""
 
 let g:grepper = {
     \ 'tools':     ['git'],
@@ -95,5 +91,17 @@ let g:ycm_server_keep_logfiles = 0
 let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_always_populate_location_list = 1
+map <leader>g :YcmCompleter  GoToDefinitionElseDeclaration<CR>
 
+"ctrl p plug
+let g:ctrlp_map = 'zz'
+let g:ctrlp_working_path_mode = 'w'
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'file': '\v\.(exe|so|dll)$',
+      \ 'link': 'some_bad_symbolic_links',
+        \ }
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:molokai_original = 1

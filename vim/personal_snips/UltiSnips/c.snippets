@@ -1,0 +1,73 @@
+###########################################################################
+#                            TextMate Snippets                            #
+###########################################################################
+
+priority -50
+
+snippet #ifndef "#ifndef ... #define ... #endif"
+#ifndef ${1/([A-Za-z0-9_]+).*/$1/}
+#define ${1:SYMBOL} ${2:value}
+#endif /* ifndef $1 */
+endsnippet
+
+snippet #if "#if #endif" b
+#if ${1:0}
+${VISUAL}${0}
+#endif
+endsnippet
+
+snippet mark "#pragma mark (mark)"
+#if 0
+${1:#pragma mark -
+}#pragma mark $2
+#endif
+
+$0
+endsnippet
+
+
+snippet for "for loop (for)"
+for (size_t ${2:i} = 0; $2 != ${1:count}; ${3:++$2}) {
+    ${VISUAL}${0}
+}
+endsnippet
+
+
+snippet eli "else if .. (eli)"
+else if (${1:/* condition */}) {
+    ${VISUAL}${0}
+}
+endsnippet
+
+snippet st "struct"
+struct ${1:`!p snip.rv = (snip.basename or "name") + "_t"`} {
+    ${0:/* data */}
+};
+endsnippet
+
+snippet tdm "map typedef" b
+typedef bsl::map<${1:arg1}, ${2:arg2}> ${3:map};
+typedef $3::const_iterator CI;
+typedef $3::iterator I;
+typedef $3::value_type VT;
+typedef bsl::pair<CI, bool> insertRet;
+endsnippet
+
+snippet tds "set typedef" b
+typedef bsl::set<${1:arg1}> ${2:set};
+typedef $2::const_iterator CI;
+typedef $2::iterator I;
+typedef bsl::pair<CI, bool> insertRet;
+endsnippet
+
+snippet tdv "vector typedef" b
+typedef bsl::vector<${1:arg1}> ${2:vector};
+typedef $2::const_iterator CI;
+typedef $2::iterator I;
+endsnippet
+
+snippet tdp "sharepointer typedef" b
+typedef bsl::shared_ptr<${1:arg1}> $1P;
+endsnippet
+
+# vim:ft=snippets:

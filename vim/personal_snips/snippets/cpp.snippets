@@ -1,0 +1,126 @@
+extends c
+
+##
+## Preprocessor	# #include <${1:iostream}>
+# #include <...>
+## STL Collections
+snippet inc 
+	#include <$1>
+snippet bs 
+	bsl::
+snippet res 
+	return EXIT_SUCCESS;
+snippet ref 
+	return EXIT_FAILURE;
+snippet ss 
+	bsl::stringstream
+# bsl::array
+snippet array
+	bsl::array<${1:T}, ${2:N}> ${3};
+# bsl::vector
+snippet vector
+	bsl::vector<${1:T}> ${2};
+# bsl::deque
+snippet deque
+	bsl::deque<${1:T}> ${2};
+# bsl::forward_list
+snippet flist
+	bsl::forward_list<${1:T}> ${2};
+# bsl::list
+snippet list
+	bsl::list<${1:T}> ${2};
+# bsl::set
+snippet set
+	bsl::set<${1:T}> ${2};
+# bsl::map
+snippet map
+	bsl::map<${1:Key}, ${2:T}> ${3};
+# bsl::multiset
+snippet mset
+	bsl::multiset<${1:T}> ${2};
+# bsl::multimap
+snippet mmap
+	bsl::multimap<${1:Key}, ${2:T}> ${3};
+# bsl::unordered_set
+snippet uset
+	bsl::unordered_set<${1:T}> ${2};
+# bsl::unordered_map
+snippet umap
+	bsl::unordered_map<${1:Key}, ${2:T}> ${3};
+# bsl::unordered_multiset
+snippet umset
+	bsl::unordered_multiset<${1:T}> ${2};
+# bsl::unordered_multimap
+snippet ummap
+	bsl::unordered_multimap<${1:Key}, ${2:T}> ${3};
+# bsl::stack
+snippet stack
+	bsl::stack<${1:T}> ${2};
+# bsl::queue
+snippet queue
+	bsl::queue<${1:T}> ${2};
+# bsl::priority_queue
+snippet pqueue
+	bsl::priority_queue<${1:T}> ${2};
+##
+## Access Modifiers
+# private
+snippet pri
+	private
+# protected
+snippet pro
+	protected
+# public
+snippet pub
+	public
+# friend
+snippet fr
+	friend
+# mutable
+snippet mu
+	mutable
+##
+## Input/Output
+# bsl::cout
+snippet cout
+	bsl::cout << ${1} << "\n";
+snippet cerr
+	bsl::cerr << ${1} << "\n";
+# bsl::cin
+snippet cin
+	bsl::cin >> ${1};
+##
+## Casts
+# static
+snippet sca
+	static_cast<${1:unsigned}>(${2:expr})${3}
+# dynamic
+snippet dca
+	dynamic_cast<${1:unsigned}>(${2:expr})${3}
+# reinterpret
+snippet rca
+	reinterpret_cast<${1:unsigned}>(${2:expr})${3}
+# const
+snippet cca
+	const_cast<${1:unsigned}>(${2:expr})${3}
+# iterator
+snippet iter
+	for (CI i = ${1:container}.begin(); i != $1.end(); ++i) {
+		${2}
+	}
+
+# auto iterator
+snippet itera
+	for (auto ${1:i} = ${2:container}.begin(); $1 != $2.end(); ++$1) {
+		${3:bsl::cout << *$1 << bsl::endl;}
+	}
+##
+## Lambdas
+# lamda (one line)
+snippet ld
+	[${1}](${2}){${3}};
+# lambda (multi-line)
+snippet lld
+	[${1}](${2}){
+		${3}
+	};
