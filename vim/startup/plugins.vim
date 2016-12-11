@@ -3,7 +3,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdcommenter'       "auto comment
 Plug 'Valloric/ListToggle'                               " Toggling quickfix and location list
-Plug 'bling/vim-airline'                                 " Status line
 Plug 'justinmk/vim-syntax-extra'                         " Flex and Bison syntax highlighting
 Plug 'luochen1990/rainbow'                               " Rainbow parenthesis coloring
 Plug 'scrooloose/syntastic'                              " Syntax checking
