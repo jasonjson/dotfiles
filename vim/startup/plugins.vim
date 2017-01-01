@@ -2,14 +2,10 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdcommenter'       "auto comment
-Plug 'Valloric/ListToggle'                               " Toggling quickfix and location list
-Plug 'justinmk/vim-syntax-extra'                         " Flex and Bison syntax highlighting
 Plug 'luochen1990/rainbow'                               " Rainbow parenthesis coloring
 Plug 'scrooloose/syntastic'                              " Syntax checking
 Plug 'spf13/vim-autoclose'                               " Matching [({'
-Plug 'tpope/vim-commentary'                              " Comment/uncomment operator
 Plug 'tpope/vim-fugitive'                                " Git Wrapper
-Plug 'tpope/vim-rhubarb'                                 " Vim + Git + Hub
 Plug 'tpope/vim-surround'                                " Surrounding text
 Plug 'SirVer/ultisnips'               " Text snippets
 Plug 'honza/vim-snippets'
@@ -27,11 +23,6 @@ call plug#end()
  let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
  let g:snips_author = "Jason Liu"
  let g:snips_email = "johnny.lyy@gmail.com""
-
-let g:grepper = {
-    \ 'tools':     ['git'],
-    \ 'jump':      1,
-    \ }
 
 " Rainbow coloring
 let g:rainbow_active = 1
@@ -63,9 +54,6 @@ let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_always_populate_loc_list = 1
 
-" Tagbar
-let g:tagbar_left = 1
-
 " UltiSnips
 " Magic to make the <enter> key expand snippes, even with YouCompleteMe installed.
 let g:UltiSnipsExpandTrigger = "<nop>"
@@ -81,16 +69,16 @@ endfunction
 inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
 
 " Vimux
-let g:VimuxOrientation = "h"
-let g:VimuxHeight = "35"
+"let g:VimuxOrientation = "h"
+"let g:VimuxHeight = "35"
 
 " YouCompleteMe
 let g:ycm_server_log_level = 'debug'
 let g:ycm_server_keep_logfiles = 0
-let g:ycm_confirm_extra_conf = 0
+"let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_always_populate_location_list = 1
-map <leader>g :YcmCompleter  GoToDefinitionElseDeclaration<CR>
+"map <leader>g :YcmCompleter  GoToDefinitionElseDeclaration<CR>
 
 "ctrl p plug
 let g:ctrlp_map = 'zz'

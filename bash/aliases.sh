@@ -1,4 +1,5 @@
 # Put shell aliases here
+eval "$(thefuck --alias)"
 
 alias lm='ls -lt | more'
 alias ll='ls -al'
