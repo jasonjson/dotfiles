@@ -13,13 +13,13 @@
     ~/.vim:
         force: true
         path: vim
+    ~/.zgen:
+        force: true
+        path: zgen
     ~/.vimrc: vimrc
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
     ~/bin: bin/
     ~/.zshrc: zshrc
-    ~/.oh-my-zsh:
-        force: true
-        path: oh-my-zsh
     ~/.gitignore:
         force: true
         path: gitignore

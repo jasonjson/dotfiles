@@ -7,12 +7,12 @@ export ZSH=/Users/yuanyuanliu/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+#ZSH_THEME="robbyrussell"
 
 source ~/.zsh/aliases.sh
 source ~/.zsh/settings.sh
 # Uncomment the following line to use case-sensitive completion.
- CASE_SENSITIVE="true"
+CASE_SENSITIVE="true"
 
 # Uncomment the following line to use hyphen-insensitive completion. Case
 # sensitive completion must be off. _ and - will be interchangeable.
@@ -53,10 +53,39 @@ source ~/.zsh/settings.sh
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git python)
+#plugins=(git python)
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
+
 # User configuration
+source "${HOME}/.zgen/zgen.zsh"
+
+# if the init scipt doesn't exist
+if ! zgen saved; then
+    echo "Creating a zgen save"
+    zgen oh-my-zsh
+    # plugins
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/python
+    zgen oh-my-zsh plugins/command-not-found
+    zgen load zsh-users/zsh-syntax-highlighting
+    zgen load /path/to/super-secret-private-plugin
+
+    # bulk load
+    zgen loadall <<EOPLUGINS
+        zsh-users/zsh-history-substring-search
+        /path/to/local/plugin
+EOPLUGINS
+    # completions
+    zgen load zsh-users/zsh-completions src
+
+    # theme
+    zgen oh-my-zsh themes/arrow
+
+    # save all to init script
+    zgen save
+fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
