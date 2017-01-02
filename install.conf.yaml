@@ -5,7 +5,6 @@
     ~/.zsh:
         force: true
         path: zsh/
-    ~/.config/nvim/init.vim: vimrc
     ~/.git_template: git_template/
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
