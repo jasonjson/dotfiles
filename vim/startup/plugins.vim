@@ -4,6 +4,7 @@ Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdcommenter'       "auto comment
 Plug 'luochen1990/rainbow'                               " Rainbow parenthesis coloring
 Plug 'scrooloose/syntastic'                              " Syntax checking
+Plug 'scrooloose/nerdtree'
 Plug 'spf13/vim-autoclose'                               " Matching [({'
 Plug 'tpope/vim-fugitive'                                " Git Wrapper
 Plug 'tpope/vim-surround'                                " Surrounding text

@@ -70,6 +70,14 @@ nnoremap <F3> :set hlsearch!<CR>
 "remove leading white spaces"
 nnoremap ft :left<CR>
 
+
+function! ToggleMovement(firstOp, thenOp)
+    let pos = getpos('.')
+    execute "normal! " . a:firstOp
+    if pos == getpos('.')
+        execute "normal! " . a:thenOp
+    endif
+endfunction
 "The original carat 0 swap, press 0 goes to the first non-white space char,
 ""press 0 again goest to the first column
 nnoremap <silent> 0 :call ToggleMovement('^', '0')<CR>

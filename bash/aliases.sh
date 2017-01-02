@@ -1,11 +1,10 @@
 # Put shell aliases here
-eval "$(thefuck --alias)"
-
 alias lm='ls -lt | more'
 alias ll='ls -al'
 alias ls='ls -G'
 #alias tm='tmux -2'
 alias tm='tmux'
+alias jk='jekyll'
 
 # cd to the root of your git repo
 alias cdr='cd $(git rev-parse --show-toplevel)'
@@ -30,7 +29,6 @@ alias gs='git status'
 alias gp='git push'
 alias gom='git push origin master'
 alias gac='git add . && git commit -m '
-alias ga='git add'
 alias gd='git diff'
 alias gb='git branch'
 alias gl='git log'
