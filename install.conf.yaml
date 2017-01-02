@@ -2,7 +2,6 @@
 
 - link:
     ~/.dotfiles: ''
-    ~/.Xdefaults: Xdefaults
     ~/.zsh:
         force: true
         path: zsh/
