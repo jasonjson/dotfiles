@@ -41,13 +41,7 @@ umask 022
 # Update winsize after each command for better line-wrapping
 #shopt -s checkwinsize
 #git checkout auto complete script
-source /Users/yuanyuanliu/dotfiles/git-completion.bash
+zstyle ':completion:*:*:git:*' script ~/dotfiles/git-completion.zsh
 ## ============================================================================
 ##                                  Prompt
 ## ============================================================================
-parse_git_branch() {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-#export PS1="\u@\h \[\033[32m\]\W\[\e\033[33m\]\$(parse_git_branch)\[\033[00m\] $"
-export PS1="\[\033[32m\]\w\[\e\033[33m\]\$(parse_git_branch)\[\033[00m\] $"
-#PS1='\[\e[1;31m\][\u@\h: \w]\[\e[0m\]\$(parse_git_branch)\[\033[00m\]'
