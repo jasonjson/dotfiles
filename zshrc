@@ -18,12 +18,12 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/python
     zgen oh-my-zsh plugins/command-not-found
     zgen load zsh-users/zsh-syntax-highlighting
-    zgen load /path/to/super-secret-private-plugin
+    zgen load zsh-users/browse-commit
+    zgen load zsh-users/alias-tips
 
     # bulk load
     zgen loadall <<EOPLUGINS
         zsh-users/zsh-history-substring-search
-        /path/to/local/plugin
 EOPLUGINS
     # completions
     zgen load zsh-users/zsh-completions src
