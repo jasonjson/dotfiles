@@ -12,6 +12,7 @@ Plug 'SirVer/ultisnips'               " Text snippets
 Plug 'honza/vim-snippets'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
+Plug 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 call plug#end()
 
@@ -93,3 +94,6 @@ let g:ctrlp_custom_ignore = {
         \ }
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:molokai_original = 1
+
+
+let g:Powerline_symbols = 'fancy'

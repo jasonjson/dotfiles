@@ -69,3 +69,6 @@ set hlsearch
 set foldmethod=manual
 set foldnestmax=3
 set foldminlines=10
+
+" Set powerline status
+set laststatus=2

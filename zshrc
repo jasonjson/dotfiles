@@ -1,9 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-ZSH_THEME="robbyrussell"
-
 source ~/.zsh/aliases.sh
 source ~/.zsh/settings.sh
+DEFAULT_USER='yuanyuanliu'
+. /Users/yuanyuanliu/anaconda3/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # User configuration
 source "${HOME}/.zgen/zgen.zsh"
@@ -20,6 +20,7 @@ if ! zgen saved; then
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/browse-commit
     zgen load zsh-users/alias-tips
+    zgen load Tarrasch/zsh-autoenv
 
     # bulk load
     zgen loadall <<EOPLUGINS
@@ -29,7 +30,7 @@ EOPLUGINS
     zgen load zsh-users/zsh-completions src
 
     # theme
-    zgen oh-my-zsh themes/arrow
+    zgen oh-my-zsh themes/agnoster
 
     # save all to init script
     zgen save
