@@ -6,6 +6,8 @@ Plug 'luochen1990/rainbow'                               " Rainbow parenthesis c
 Plug 'scrooloose/syntastic'                              " Syntax checking
 Plug 'scrooloose/nerdtree'
 Plug 'spf13/vim-autoclose'                               " Matching [({'
+Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 Plug 'tpope/vim-fugitive'                                " Git Wrapper
 Plug 'tpope/vim-surround'                                " Surrounding text
 Plug 'SirVer/ultisnips'               " Text snippets
@@ -95,5 +97,5 @@ let g:ctrlp_custom_ignore = {
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:molokai_original = 1
 
-
+let g:vim_markdown_folding_disabled = 1
 let g:Powerline_symbols = 'fancy'
