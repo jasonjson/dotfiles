@@ -5,6 +5,7 @@ alias ls='ls -G'
 #alias tm='tmux -2'
 alias tm='tmux'
 alias jk='jekyll'
+alias blog='cd /Users/yuanyuanliu/Documents/my_blog'
 
 # cd to the root of your git repo
 alias cdr='cd $(git rev-parse --show-toplevel)'
