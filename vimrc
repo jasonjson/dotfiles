@@ -8,5 +8,5 @@ source ~/.vim/startup/functions/formatting.vim
 source ~/.vim/startup/settings.vim
 source ~/.vim/startup/plugins.vim
 source ~/.vim/startup/mappings.vim
-let g:solarized_termcolors=256
-colorscheme solarized
+"let g:solarized_termcolors=256
+colorscheme molokai
