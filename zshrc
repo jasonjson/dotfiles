@@ -3,7 +3,7 @@
 source ~/.zsh/aliases.sh
 source ~/.zsh/settings.sh
 DEFAULT_USER='yuanyuanliu'
-. /Users/yuanyuanliu/anaconda3/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
+#. /Users/yuanyuanliu/anaconda3/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # User configuration
 source "${HOME}/.zgen/zgen.zsh"

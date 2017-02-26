@@ -100,3 +100,5 @@ nnoremap <leader>em :vsplit ~/.vim/startup/mappings.vim<cr>
 nnoremap <leader>es :vsplit ~/.vim/startup/settings.vim<cr>
 nnoremap <leader>ep :vsplit ~/.vim/startup/plugins.vim<cr>
 nnoremap <leader>sv :source ~/.vimrc<cr>
+
+set pastetoggle=<F6>

@@ -8,7 +8,7 @@ export EDITOR=vi
 export KEYTIMEOUT=1
 
 PATH=$HOME/bin
-PATH=$PATH:/Users/yuanyuanliu/anaconda3/bin
+PATH=$PATH:/Users/yuanyuanliu/miniconda3/bin
 PATH=$PATH:/opt/bb/bin
 PATH=$PATH:/bb/bin
 PATH=$PATH:/opt/swt/bin

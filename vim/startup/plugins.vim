@@ -1,5 +1,6 @@
 call plug#begin('~/.vim/plugged')
 
+Plug 'tell-k/vim-autopep8'
 Plug 'tomasr/molokai'
 Plug 'scrooloose/nerdcommenter'       "auto comment
 Plug 'luochen1990/rainbow'                               " Rainbow parenthesis coloring
