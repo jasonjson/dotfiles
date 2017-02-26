@@ -10,13 +10,15 @@ inoremap jj <Esc><Right>
 inoremap jk <Esc><Right>
 
 " Setting vim tab
-noremap <leader>1 1gt
-noremap <leader>2 2gt
-noremap <leader>3 3gt
-noremap <leader>4 4gt
-noremap <leader>5 5gt
-noremap <leader>6 6gt
-noremap <leader>7 7gt
+"noremap <leader>1 1gt
+noremap j1 1gt
+noremap j2 2gt
+noremap j3 3gt
+noremap j4 4gt
+noremap j5 5gt
+noremap j6 6gt
+noremap j7 7gt
+"noremap <leader>7 7gt
 
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings

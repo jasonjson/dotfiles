@@ -7,6 +7,10 @@ alias tm='tmux'
 alias jk='jekyll'
 alias blog='cd /Users/yuanyuanliu/Documents/my_blog'
 
+#conda virtualenv
+alias sa='source activate'
+alias sd='source deactivate'
+
 # cd to the root of your git repo
 alias cdr='cd $(git rev-parse --show-toplevel)'
 alias c='clear'
