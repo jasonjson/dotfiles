@@ -72,3 +72,5 @@ set foldminlines=10
 
 " Set powerline status
 set laststatus=2
+set encoding=utf-8
+set fileencoding=utf-8
