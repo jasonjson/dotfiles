@@ -3,7 +3,15 @@
 source ~/.zsh/aliases.sh
 source ~/.zsh/settings.sh
 DEFAULT_USER='yuanyuanliu'
-#. /Users/yuanyuanliu/anaconda3/lib/python3.5/site-packages/powerline/bindings/zsh/powerline.zsh
+
+function clone {
+    url=$1;
+    reponame=$(echo $url | awk -F/ '{print $NF}' | sed -e 's/.git$//');
+    git clone $url $reponame;
+    cd $reponame;
+    cp ~/dotfiles/git/gitignore .gitignore;
+    cp ~/dotfiles/git/pre-commit-config.yaml .pre-commit-config.yaml;
+}
 
 # User configuration
 source "${HOME}/.zgen/zgen.zsh"
