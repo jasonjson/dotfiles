@@ -1,27 +1,23 @@
+- defaults:
+    link:
+      relink: true
+
 - clean: ['~']
 
 - link:
     ~/.dotfiles: ''
-    ~/.zsh:
-        force: true
-        path: zsh/
-    ~/.git_template: git_template/
-    ~/.gitconfig: gitconfig
+    ~/.zsh: zsh
+    ~/.git_template: git/git_template
+    ~/.gitconfig: git/gitconfig
     ~/.tmux.conf: tmux.conf
-    ~/.tmux: tmux/
-    ~/.vim:
-        force: true
-        path: vim
-    ~/.zgen:
-        force: true
-        path: zgen
+    ~/.tmux: tmux
+    ~/.vim: vim
+    ~/.zgen: zgen
     ~/.vimrc: vimrc
     ~/.ycm_extra_conf.py: ycm_extra_conf.py
     ~/bin: bin/
     ~/.zshrc: zshrc
-    ~/.gitignore:
-        force: true
-        path: gitignore
+    ~/.vim: vim
 
 - shell:
   - [git submodule update --init --recursive, Updating submodules]

@@ -18,3 +18,4 @@ xmonad.errors
 xmonad/lib
 xmonad/xmonad
 !tmux/plugins/tpm
+pre-commit-config.yaml

@@ -12,10 +12,10 @@ source "${HOME}/.zgen/zgen.zsh"
 if ! zgen saved; then
     echo "Creating a zgen save"
     zgen oh-my-zsh
-    # plugins
+     #plugins
     zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/sudo
-    zgen oh-my-zsh plugins/python
+    #zgen oh-my-zsh plugins/python
     zgen oh-my-zsh plugins/command-not-found
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load zsh-users/browse-commit
