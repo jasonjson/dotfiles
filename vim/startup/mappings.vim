@@ -13,11 +13,7 @@ inoremap jk <Esc><Right>
 noremap <F1> 1gt
 noremap <F2> 2gt
 noremap <F3> 3gt
-"noremap <leader>2 2gt
-"noremap <leader>3 3gt
-"noremap <leader>4 4gt
-"noremap <leader>5 5gt
-"noremap <leader>6 6gt
+noremap <F4> 4gt
 
 nmap <C-j> o<Esc>j
 
