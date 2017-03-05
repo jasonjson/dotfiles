@@ -56,8 +56,11 @@ let g:rainbow_conf = {
 
 " Syntastic
 let g:syntastic_aggregate_errors = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
 let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_python_python_exec = '/Users/yuanyuanliu/miniconda3/bin/python'
+let g:syntastic_python_checkers=['pylint']
+let g:syntastic_quiet_messages = { "level":  "warnings", "type": "style" }
 
 " UltiSnips
 " Magic to make the <enter> key expand snippes, even with YouCompleteMe installed.
@@ -73,17 +76,13 @@ function! ExpandSnippetOrCarriageReturn()
 endfunction
 inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
 
-" Vimux
-"let g:VimuxOrientation = "h"
-"let g:VimuxHeight = "35"
-
 " YouCompleteMe
 let g:ycm_server_log_level = 'debug'
 let g:ycm_server_keep_logfiles = 0
 "let g:ycm_confirm_extra_conf = 0
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_always_populate_location_list = 1
-"map <leader>g :YcmCompleter  GoToDefinitionElseDeclaration<CR>
+map <leader>g :YcmCompleter  GoToDefinitionElseDeclaration<CR>
 
 "ctrl p plug
 let g:ctrlp_map = 'zz'

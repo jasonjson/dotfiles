@@ -10,15 +10,16 @@ inoremap jj <Esc><Right>
 inoremap jk <Esc><Right>
 
 " Setting vim tab
-"noremap <leader>1 1gt
-noremap j1 1gt
-noremap j2 2gt
-noremap j3 3gt
-noremap j4 4gt
-noremap j5 5gt
-noremap j6 6gt
-noremap j7 7gt
-"noremap <leader>7 7gt
+noremap <F1> 1gt
+noremap <F2> 2gt
+noremap <F3> 3gt
+"noremap <leader>2 2gt
+"noremap <leader>3 3gt
+"noremap <leader>4 4gt
+"noremap <leader>5 5gt
+"noremap <leader>6 6gt
+
+nmap <C-j> o<Esc>j
 
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
@@ -71,11 +72,11 @@ nnoremap <Leader>ve :vsp<CR>:e %:h<CR>
 
 map cc <plug>NERDCommenterToggle
 "repalce tabs with white spaces"
-map <F2> :retab <CR> :wq! <CR>
+map <F7> :retab <CR> :wq! <CR>
 ""Nerdtree open/close"
 nnoremap <F5> :NERDTreeToggle<CR>
 ""toggle highlight search"
-nnoremap <F3> :set hlsearch!<CR>
+nnoremap <F8> :set hlsearch!<CR>
 
 "remove leading white spaces"
 nnoremap ft :left<CR>
