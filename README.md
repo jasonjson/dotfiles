@@ -1,5 +1,5 @@
 ### Installation
-```
+```bash
 cd ~/dotfiles
 git pull
 ./install
