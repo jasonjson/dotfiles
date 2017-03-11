@@ -60,7 +60,7 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_python_python_exec = '/Users/yuanyuanliu/miniconda3/bin/python'
 let g:syntastic_python_checkers=['pylint']
-let g:syntastic_quiet_messages = { "level":  "warnings", "type": "style", "regex": "flask" }
+let g:syntastic_quiet_messages = { "level":  "warnings", "type": "style", "regex": ["flask", "wtforms",'migrate']}
 
 " UltiSnips
 " Magic to make the <enter> key expand snippes, even with YouCompleteMe installed.
