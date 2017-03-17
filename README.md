@@ -1,4 +1,4 @@
-### Installation
+## Installation
 ```bash
 cd ~/dotfiles
 git pull
