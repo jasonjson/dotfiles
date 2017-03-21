@@ -5,7 +5,6 @@ alias ls='ls -G'
 #alias tm='tmux -2'
 alias tm='tmux'
 alias jk='jekyll'
-alias blog='cd /Users/yuanyuanliu/Documents/my_blog'
 
 #conda virtualenv
 alias sa='source activate'
@@ -22,12 +21,6 @@ alias v='vim -p'
 alias py='python'
 alias vi='vim -p'
 #alias vp='vi -p'
-alias arc='/home/phab/bin/arc'
-
-#------make files-----
-alias p='plink -d stage'
-alias m='metamkmk -t other -f'
-alias cln='rm -rf *.tsk *.o 00* *.linux'
 
 #----git related----
 alias gs='git status'
