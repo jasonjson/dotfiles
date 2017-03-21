@@ -26,3 +26,6 @@ vim is installed in /usr/bin, current version is 8.0
 ### YouCompleteMe
 This plugin is compatitable with conda python. Vim and Youcompleteme can have different python build
 
+### tmux and vim mapping
+1. system preference -> keyboard -> modify keys -> choose keyboard -> option == option
+2. change vim mapping based on [this](http://stackoverflow.com/questions/7501092/can-i-map-alt-key-in-vim)
