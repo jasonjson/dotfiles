@@ -17,8 +17,6 @@ noremap ¢ 4gt
 noremap ∞ 5gt
 noremap § 6gt
 
-nmap <C-j> o<Esc>j
-
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
 "" ============================================================================
@@ -94,8 +92,8 @@ nnoremap <silent> 0 :call ToggleMovement('^', '0')<CR>
 nnoremap <silent> G :call ToggleMovement('G', 'gg')<CR>
 nnoremap <silent> gg :call ToggleMovement('gg', 'G')<CR>"
 
-nnoremap <C-w> :w<CR>
-inoremap <C-w> <esc>='[:w<cr>]'
+"nnoremap <C-w> :w<CR>
+"inoremap <C-w> <esc>='[:w<cr>]'
 
 nnoremap <leader>em :vsplit ~/.vim/startup/mappings.vim<cr>
 nnoremap <leader>es :vsplit ~/.vim/startup/settings.vim<cr>
