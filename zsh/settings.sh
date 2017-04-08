@@ -20,11 +20,6 @@ PATH=$PATH:/usr/sbin
 
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
-#export LANG=en_US.UTF
-
-export HTTP{,S}_PROXY=""
-export http{,s}_proxy=""
-export no_proxy=""
 
 ## ============================================================================
 ##                                 Settings
