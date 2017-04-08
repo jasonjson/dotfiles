@@ -11,7 +11,7 @@ git pull
 3. set up alias
 
 ## Install vim
-**Do NOT install vim with *conda python*, remove *conda python* from your path**
+Do **NOT** install vim with *conda python*, remove *conda python* from your path
 ```bash
 git clone https://github.com/vim/vim.git
 cd vim
