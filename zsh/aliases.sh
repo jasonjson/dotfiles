@@ -20,6 +20,7 @@ alias ....='cd ../../..'
 alias v='vim -p'
 alias py='python'
 alias vi='vim -p'
+alias py='/usr/bin/python3.6'
 #alias vp='vi -p'
 
 #----git related----
