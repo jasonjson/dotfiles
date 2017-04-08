@@ -38,3 +38,5 @@ zstyle ':completion:*:*:git:*' script ~/dotfiles/git-completion.zsh
 ## ============================================================================
 ##                                  Prompt
 ## ============================================================================
+bindkey "^[[1;3C" forward-word
+bindkey "^[[1;3D" backward-word

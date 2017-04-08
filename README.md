@@ -38,3 +38,4 @@ This plugin is compatitable with conda python. Vim and Youcompleteme can have di
 ### tmux and vim mapping
 1. system preference -> keyboard -> modify keys -> choose keyboard -> option == option
 2. change vim [mapping](http://stackoverflow.com/questions/7501092/can-i-map-alt-key-in-vim)
+3. Set alt/option key as meta key in Iterm2 profile key setting.
