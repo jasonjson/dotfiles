@@ -11,8 +11,7 @@ git pull
 3. set up alias
 
 ## Install vim
-Do NOT install vim with **conda python**
-Remove conda python from your path
+**Do NOT install vim with *conda python*, remove *conda python* from your path**
 ```bash
 git clone https://github.com/vim/vim.git
 cd vim
@@ -30,7 +29,7 @@ cd vim
             --prefix=/usr
 cd src && sudo make install
 ```
-vim is installed in /usr/bin, current version is 8.0
+
 [Build vim from source](https://github.com/Valloric/YouCompleteMe/wiki/Building-Vim-from-source)
 
 ### YouCompleteMe
