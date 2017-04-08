@@ -13,8 +13,8 @@ PATH=$PATH:/opt/swt/bin
 PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:/bin
 PATH=$PATH:/sbin
-PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/bin
+PATH=$PATH:/usr/local/bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/sbin
 

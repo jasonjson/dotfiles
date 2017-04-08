@@ -6,9 +6,12 @@ git pull
 ```
 
 ## Install python
-1. Download [python source code](https://www.python.org/downloads/)
-2. `./configure --prefix=/usr`
-3. set up alias
+* From source code
+    1. Download [python source code](https://www.python.org/downloads/)
+    2. `./configure --prefix=/usr && make && sudo make install`
+* Use homebrew
+    1. brew install python3, excutable is in /usr/local/bin and libraries are located in /usr/local/lib
+    2. Use pip3 to install packages for python3 and pip for python2
 
 ## Install vim
 Do **NOT** install vim with *conda python*, remove *conda python* from your path

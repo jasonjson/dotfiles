@@ -18,10 +18,9 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias v='vim -p'
-alias py='python'
+alias py='python3'
+alias pip='/usr/local/bin/pip3'
 alias vi='vim -p'
-alias py='/usr/bin/python3.6'
-#alias vp='vi -p'
 
 #----git related----
 alias gs='git status'
