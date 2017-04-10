@@ -59,7 +59,7 @@ let g:rainbow_conf = {
 let g:syntastic_aggregate_errors = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_python_python_exec = '/Users/yuanyuanliu/miniconda3/bin/python'
+let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 let g:syntastic_python_checkers=['pylint']
 let g:syntastic_quiet_messages = { "level":  "warnings", "type": "style", "regex": ["flask", "wtforms",'migrate', "__subclasses__", ".query.*member", "Instance of 'tuple' has"]}
 

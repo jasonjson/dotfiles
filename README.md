@@ -12,6 +12,7 @@ git pull
 * Use homebrew
     1. brew install python3, excutable is in /usr/local/bin and libraries are located in /usr/local/lib
     2. Use pip3 to install packages for python3 and pip for python2
+* Remember to update python path and install pylint for *sytastic* plugin.
 
 ## Install vim
 Do **NOT** install vim with *conda python*, remove *conda python* from your path
