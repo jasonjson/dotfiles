@@ -78,6 +78,10 @@ endfunction
 inoremap <expr> <CR> pumvisible() ? "<C-R>=ExpandSnippetOrCarriageReturn()<CR>" : "\<CR>"
 
 " YouCompleteMe
+let g:ycm_cache_omnifunc = 0
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_server_log_level = 'debug'
 let g:ycm_server_keep_logfiles = 0
 "let g:ycm_confirm_extra_conf = 0
