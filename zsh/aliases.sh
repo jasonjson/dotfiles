@@ -21,6 +21,8 @@ alias v='vim -p'
 alias py='python3'
 alias pip='/usr/local/bin/pip3'
 alias vi='vim -p'
+alias newp='/Users/yuanyuanliu/Documents/projects/blog/_utils/generate_post.py'
+alias pr='cd ~/Documents/projects'
 
 #----git related----
 alias gs='git status'

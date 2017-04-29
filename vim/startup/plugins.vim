@@ -61,7 +61,7 @@ let g:syntastic_check_on_wq = 1
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_python_python_exec = '/usr/local/bin/python3'
 let g:syntastic_python_checkers=['pylint']
-let g:syntastic_quiet_messages = { "level":  "warnings", "type": "style", "regex": ["flask", "wtforms",'migrate', "__subclasses__", ".query.*member", "Instance of 'tuple' has"]}
+let g:syntastic_quiet_messages = { "level":  "warnings", "type": "style", "regex": ["flask", "wtforms",'migrate', "__subclasses__", ".query.*member", "Instance of 'tuple' has", "iloc"]}
 
 " UltiSnips
 " Magic to make the <enter> key expand snippes, even with YouCompleteMe installed.
