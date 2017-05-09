@@ -38,3 +38,7 @@ alias gco='git checkout'
 #-------tar----
 alias tarc='tar czvf 1.tar.gz'
 alias tarx='tar xzvf 1.tar.gz'
+
+#---leetcode--
+alias lc='leetcode'
+lcs() {leetcode show "$1" -g -x -l python}
