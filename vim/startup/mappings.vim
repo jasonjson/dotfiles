@@ -10,12 +10,12 @@ inoremap jj <Esc><Right>
 inoremap jk <Esc><Right>
 
 " Setting vim tab
-noremap ± 1gt
-noremap ² 2gt
-noremap ³ 3gt
-noremap ´ 4gt
-noremap µ 5gt
-noremap ¶ 6gt
+noremap ¡ 1gt
+noremap ™ 2gt
+noremap £ 3gt
+noremap ¢ 4gt
+noremap ∞ 5gt
+noremap § 6gt
 
 "" ============================================================================
 ""                        Normal/Visual Mode Mappings
