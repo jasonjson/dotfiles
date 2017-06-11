@@ -9,6 +9,7 @@
     ~/.zsh: zsh
     ~/.git_template: git/git_template
     ~/.gitconfig: git/gitconfig
+    ~/.gitignore_global: git/gitignore
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux
     ~/.vim: vim

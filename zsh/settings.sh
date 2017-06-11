@@ -8,9 +8,6 @@ export EDITOR=vi
 export KEYTIMEOUT=1
 
 PATH=$HOME/bin
-PATH=$PATH:/opt/bb/bin
-PATH=$PATH:/opt/swt/bin
-PATH=$PATH:$HOME/.local/bin
 PATH=$PATH:/bin
 PATH=$PATH:/sbin
 PATH=$PATH:/usr/bin
