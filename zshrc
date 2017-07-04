@@ -29,6 +29,7 @@ if ! zgen saved; then
     zgen load zsh-users/browse-commit
     zgen load zsh-users/alias-tips
     zgen load Tarrasch/zsh-autoenv
+    zgen load zsh-users/zsh-autosuggestions
 
     # bulk load
     zgen loadall <<EOPLUGINS
