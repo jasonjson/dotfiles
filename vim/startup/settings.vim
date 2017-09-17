@@ -115,3 +115,6 @@ function! XTermPasteBegin()
 endfunction
 
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+"remove trailing spaces when save the file
+autocmd BufWritePre * %s/\s\+$//e
