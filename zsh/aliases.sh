@@ -41,4 +41,4 @@ alias tarx='tar xzvf 1.tar.gz'
 
 #---leetcode--
 alias lc='leetcode'
-lcs() {leetcode show "$1" -g -x -l java}
+lcs() {leetcode show "$1" -g -x -l python}
