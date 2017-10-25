@@ -76,7 +76,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 
 function HeaderPython()
-    call setline(1, "#!/usr/local/bin/python3")
+    call setline(1, "#!/usr/bin/python")
     call setline(2, "# -*- coding: utf-8 -*-")
     call setline(3, "")
     normal G
