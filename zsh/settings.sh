@@ -4,14 +4,16 @@
 export GTEST_COLOR=yes
 export EDITOR=vi
 
+HISTSIZE=130000
+SAVEHIST=130000
+
 # Reduce delay to 0.1 seconds for switching to normal mode with ESC
 export KEYTIMEOUT=1
-
 PATH=$HOME/bin
 PATH=$PATH:/bin
 PATH=$PATH:/sbin
-PATH=$PATH:/usr/bin
 PATH=$PATH:/usr/local/bin
+PATH=$PATH:/usr/bin
 PATH=$PATH:/usr/local/sbin
 PATH=$PATH:/usr/sbin
 
@@ -37,3 +39,7 @@ zstyle ':completion:*:*:git:*' script ~/dotfiles/git-completion.zsh
 ## ============================================================================
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
+
+#share history between terminals
+setopt inc_append_history
+setopt share_history

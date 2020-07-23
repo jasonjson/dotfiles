@@ -7,9 +7,6 @@
 - link:
     ~/.dotfiles: ''
     ~/.zsh: zsh
-    ~/.git_template: git/git_template
-    ~/.gitconfig: git/gitconfig
-    ~/.gitignore_global: git/gitignore
     ~/.tmux.conf: tmux.conf
     ~/.tmux: tmux
     ~/.vim: vim
@@ -23,10 +20,6 @@
 - shell:
   - [git submodule update --init --recursive, Updating submodules]
   - command: vim +PlugUpdate +PlugUpgrade +UpdateRemotePlugins +qall
-    stdin: true
-    stdout: true
-    stderr: true
-  - command: scripts/ycm_regular_install.sh &
     stdin: true
     stdout: true
     stderr: true

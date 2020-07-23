@@ -1,3 +1,0 @@
-#!/bin/bash
-# Short script to make viewing csv files in `less` more pleasant
-sed 's/,,/, ,/g;s/,,/, ,/g' "$1" | column -s, -t | less
